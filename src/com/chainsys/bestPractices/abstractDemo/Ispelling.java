@@ -1,59 +1,32 @@
 package com.chainsys.bestPractices.abstractDemo;
 
 public interface Ispelling {
-           void spellCheck(String word); // must be implemented by all languages
-           void checkGrammar(String sentence); // must be implemented by all languages
-           int wordCount(String sentence); // the logic is the same for all language
-           
+	void spellCheck(String word);
+
+	void checkGrammer(String sentence);
+
+	int wordCount(String sentence);
 }
-abstract class Language implements Ispelling{
+
+abstract class Language implements Ispelling {
 	@Override
 	public int wordCount(String sentence) {
-		String [] words= sentence.split(" ");
-		return words.length;
+		String[] sen = sentence.split(" ");
+		return sen.length;
 	}
 }
- class EnglishLanguage extends Language implements Ispelling
- {
 
-	@Override
+class Englishlanguage implements Ispelling {
 	public void spellCheck(String word) {
-		System.out.println("English spellchecker");
+		System.out.println("English SpellChecker");
 	}
 
-	@Override
-	public void checkGrammar(String sentence) {
-		System.out.println("English checkGrammar");
+	public void checkGrammer(String sentence) {
+		System.out.println("English GrammerCheck");
 	}
 
-	
-	 
- }
- class TamilLanguage extends Language implements Ispelling
- {
-
-	@Override
-	public void spellCheck(String word) {
-		System.out.println("Tamil spellchecker");
+	public int wordCount(String sentence) {
+		String[] sen = sentence.split(" ");
+		return sen.length;
 	}
-
-	@Override
-	public void checkGrammar(String sentence) {
-		System.out.println("Tamil checkGrammar");
-	}
-	 
- }
- class FrenchLanguage extends Language implements Ispelling
- {
-
-	@Override
-	public void spellCheck(String word) {
-		System.out.println("French spellchecker");
-	}
-
-	@Override
-	public void checkGrammar(String sentence) {
-		System.out.println("French checkGrammar");
-	}
-	 
- }
+}

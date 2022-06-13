@@ -1,12 +1,12 @@
 package com.chainsys.bestPractices.abstractDemo;
 
-public class TestScoreBoard {
-
+class TestScoreBoard {
 	public static void main(String[] args) {
-		ScoreBoard sb = ScoreBoard.createObject();
-		System.out.println(sb.TargetScore);
-		sb.TargetScore = 186;
-		System.out.println(sb.TargetScore);
+		// ScoreBoard firstScore=new ScoreBoard(); // cannot create invoke private
+		// constructor
+		ScoreBoard firstScore = ScoreBoard.createObject();
+		System.out.println(firstScore.TargetScore);
+		firstScore.TargetScore = 180;
+		System.out.println(firstScore.TargetScore);
 	}
-
 }
