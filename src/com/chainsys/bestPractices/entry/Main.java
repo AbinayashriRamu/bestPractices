@@ -1,12 +1,11 @@
 package com.chainsys.bestPractices.entry;
 
+import com.chainsys.bestPractices.stream.StreamLessons;
+
 public class Main {
 
-	public static void main(String[] args) 
-	{
-		
-		System.out.println("welcome back");
-
+	public static void main(String[] args) {
+		StreamLessons.demoO();
 	}
 
 }
